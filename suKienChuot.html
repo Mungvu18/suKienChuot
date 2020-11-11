@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<img id="ball" src="https://img-cache.coccoc.com/image2?i=3&l=44/475410533" alt="Don't see img">
+<p>Please kick mouse on, the ball will move right!</p>
+<button id="demo" onclick="ballMove()">Click me</button>
+<script>
+    // // tạo biến để lưu hình ảnh quả bóng và sử dụng hàm getElementById() để nhận được một đối tượng DOM và sau đó gán cho
+    // biến ball
+    // Khởi tạo hàm init() để giúp ball có vị trí và các thuộc tính khác
+    function init(){
+        let ball = document.getElementById("ball");
+        ball.style.position = 'relative';
+        ball.style.left = '0px';
+    }
+    // tạo hàm để tăng khoảng cách sang trái 10 px
+    function ballMove(){
+        ball.style.left = parseFloat(ball.style.left) + 10 + "px";
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
